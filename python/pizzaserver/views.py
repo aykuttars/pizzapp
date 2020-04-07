@@ -72,7 +72,7 @@ def register(request):
         user = User.objects.create(
             username=serialized.data['username'],
         )
-        if serialized.data['email']:
+        if 'email' in serialized.data and serialized.data['email']:
             user.email =serialized.data['email']
         user.set_password(serialized.data['password'])
         user.save()

@@ -61,7 +61,7 @@ def start_task_prediction_worker(task):
             fcast_step = sarimax.get_forecast(steps=step)
             fcast_data = fcast_step.predicted_mean
             # create date index for forecast data
-            fcast_idx  = pd.date_range(max(ts.index) + timedelta(1), periods=len(fcast_data), freq='D')
+            fcast_idx  = pd.date_range(max(ts.index) + timedelta(1), periods=len(fcast_data), freq='M')
             # create new series with date index
             fcast = pd.Series(fcast_data.values, index=fcast_idx)
 

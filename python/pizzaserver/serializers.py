@@ -32,8 +32,6 @@ jwt_get_username_from_payload = api_settings.JWT_PAYLOAD_GET_USERNAME_HANDLER
 
 class UserLoginSerializer(JSONWebTokenSerializer):
     
-    username_field = 'username'
-
     def validate(self, params):
         password = params.get("password")
         exist_user = (models.User.objects.filter(email=params.get("username")).first()
