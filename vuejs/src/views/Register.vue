@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-      <v-container>
+      <v-container fluid style="width: 25%">
         <v-card class="elevation-12">
           <v-toolbar color="#00B887" dark flat>
             <v-toolbar-title>Register</v-toolbar-title>

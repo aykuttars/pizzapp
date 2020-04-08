@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container fluid style="width: 25%" >
         <v-layout column>
             <v-card>
                 <v-card-text>
@@ -61,7 +61,7 @@
                     />
                 </v-card-text>
                 <v-card-actions>
-                    <v-btn color="#00B887" :loading="loading" @click.native="update">
+                    <v-btn color="#00B887" class="ma-2 white--text" :loading="loading" @click.native="update">
                         <v-icon left dark>mdi-check</v-icon>
                         Save Changes
                     </v-btn>
