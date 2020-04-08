@@ -1,0 +1,20 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$UWW7DaZCnFvm$n7x8gVG5xkov3BXrdmZ4wtsJaplgsGH3b8GPO0yESB0=",
+        "last_login": "2020-03-11T18:56:40.265Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "pizza",
+        "last_name": "admin",
+        "email": "admin@pizza.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-03-11T10:41:16.423Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
