@@ -12,7 +12,7 @@ git clone https://gitlab.com/aykutarslantas/pizzaapp.git
 Django Rest Framework used to create API functionality. 
 
 ``` bash
-cd backend
+cd python
 pip install -r requirements_file.txt
 ```
 
@@ -22,7 +22,7 @@ The frontend created using Vue framework and yarn as dependency manager.
 
 
 ``` bash
-cd frontend
+cd vuejs
 yarn install
 yarn global add @vue/cli 
 yarn upgrade vue cli service / plugins 
