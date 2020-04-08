@@ -45,7 +45,7 @@ class PizzaAPITest(APITestCase):
         self.assertEqual(response['content-type'], 'application/json')
 
     def test_post_start_task(self):
-        excel_file = SimpleUploadedFile("test_data.xlsx", b"file_content", content_type="xlsx")
+        excel_file = SimpleUploadedFile("instance.xlsx", b"file_content", content_type="xlsx")
         task = Tasks.objects.create(step=3, name='instance_task', data_filepath=excel_file)
         response = self.client.post(f"{self.tasks_url}/{task.id}/start_task/")
         self.assertEqual(response.status_code, 200)
