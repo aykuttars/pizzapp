@@ -37,7 +37,7 @@ yarn upgrade vue cli service / plugins
 Backend serves on 8000 port.
 
 ```bash
-cd backend
+cd python
 python manage.py migrate
 python manage.py loaddata user
 python manage.py runserver
@@ -48,7 +48,7 @@ python manage.py runserver
 Frontend serves on 8080 port. The default user credentials username: testuser , password: testpasswd
 
 ```bash
-cd frontend
+cd vuejs
 yarn serve
 ```
 
