@@ -1,20 +1,20 @@
 [
-{
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$180000$UWW7DaZCnFvm$n7x8gVG5xkov3BXrdmZ4wtsJaplgsGH3b8GPO0yESB0=",
-        "last_login": "2020-04-08 10:09:33.279168",
-        "is_superuser": true,
-        "username": "admin",
-        "first_name": "pizza",
-        "last_name": "admin",
-        "email": "admin@pizza.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2020-04-07 12:06:10.279168",
-        "groups": [],
-        "user_permissions": []
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password" : "pbkdf2_sha256$180000$pCH19VOA7zJJ$ImGbAYpDWwaRCsMv8PK83nDmTcS88nch+mlOJDpPUg4=",
+            "last_login": "2020-04-08 10:09:33.279168",
+            "is_superuser": true,
+            "username" : "testuser",
+            "first_name": "pizza",
+            "last_name": "admin",
+            "email" : "test@pizza.com",
+            "is_staff" : 1,
+            "is_active" : 1,
+            "date_joined": "2020-04-07 12:06:10.279168",
+            "groups": [],
+            "user_permissions": []
+        }
     }
-}
 ]
