@@ -8,6 +8,8 @@ function isNil(value) {
 const state = {
     user: undefined,
     username: "",
+    email:"",
+    oldPassword:"",
     password: "",
     passwordAgain: "",
 }
@@ -35,6 +37,27 @@ const actions = {
         userHelper.logout();
         commit('clear');
         router.push('/login');
+    },
+    update: async ({commit, dispatch, state}) => {
+        const updateUser = {
+            token: state.user.token,
+            username: state.username,
+            email:state.email,
+            oldPassword:state.oldPassword,
+            password: state.password,
+            passwordAgain: state.passwordAgain,
+        }
+        userHelper.update(updateUser)
+        .then(
+            user => {
+                commit('loginSuccess', user);
+                // router.push('/');
+            },
+            error => {
+                commit('clear');
+                dispatch('alert/error', error, { root: true });
+            }
+        );
     },
     register: async ({ dispatch, commit, state }) => {
         
@@ -69,6 +92,10 @@ const actions = {
 const mutations = {
     setUsername: (state, username) =>
         (state.username = username),
+    setEmail: (state, email) =>
+    (state.email = email),
+    setOldPasswd: (state, oldPasswd) =>
+    (state.oldPassword = oldPasswd),
     setPassword: (state, password) =>
         (state.password = password),
     setPasswordAgain: (state, passwordAgain) =>
@@ -76,12 +103,16 @@ const mutations = {
     loginSuccess(state, user) {
         state.user = user;
         state.username = user.username;
+        state.email = user.email;
+        state.oldPassword = "";
         state.password = "";
         state.passwordAgain = "";
     },
     clear(state) {
         state.user = null;
         state.username = "";
+        state.email = "";
+        state.oldPassword = "";
         state.password = "";
         state.passwordAgain = "";
     }

@@ -6,6 +6,7 @@ export const userHelper = {
   logout,
   register,
   checkLogin,
+  update
 };
 
 
@@ -68,5 +69,25 @@ function register(userData) {
     .then(result => {
       return result;
     });
-}s
+}
+
+
+function update(userData) {
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userData })
+  };
+  // 'X-CSRFToken': Cookies.get('csrftoken')
+  return fetch(`${API_URL}/update-user/`, requestOptions)
+    .then(handleResponse)
+    .then(user => {
+      // login successful if there's a jwt token in the response
+      if (user.token) {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+      return user;
+    });
+}
 
