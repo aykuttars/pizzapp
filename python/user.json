@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$180000$UWW7DaZCnFvm$n7x8gVG5xkov3BXrdmZ4wtsJaplgsGH3b8GPO0yESB0=",
-        "last_login": "2020-03-11T18:56:40.265Z",
+        "last_login": "2020-04-08 10:09:33.279168",
         "is_superuser": true,
         "username": "admin",
         "first_name": "pizza",
@@ -12,7 +12,7 @@
         "email": "admin@pizza.com",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2020-03-11T10:41:16.423Z",
+        "date_joined": "2020-04-07 12:06:10.279168",
         "groups": [],
         "user_permissions": []
     }
