@@ -1,0 +1,1 @@
+export const API_URL = `${window.location.href.split(':')[0]}://${window.location.hostname}:8000/api/v1`;
