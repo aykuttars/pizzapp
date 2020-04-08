@@ -1,7 +1,17 @@
-import './assets/style.css';
+import Vue from 'vue'
+import vuetify from './plugins/vuetify';
+import store from './store';
+import router from './router';
+import App from './App.vue';
+import JsonExcel from 'vue-json-excel'
 
-import spa from './spa';
+Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
+Vue.component('downloadExcel', JsonExcel)
 
-spa.$mount('#app');
+new Vue({
+  vuetify,
+  store,
+  router,
+  render: h => h(App)
+}).$mount('#app')

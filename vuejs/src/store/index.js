@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import authentication from './authentication'
+import tasks from './tasks'
+import alert from './alert'
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
@@ -11,10 +14,15 @@ export default new Vuex.Store({
     plugins: [createPersistedState({
         key: 'vuex',
         reducer(val) {
-            if (val.user === null) { 
+            if (val.user === null) { // val.user.token 
                 return {}
             }
             return val
         }
     })],
+    modules: {
+        alert,
+        authentication,
+        tasks,
+    },
 })
