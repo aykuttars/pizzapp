@@ -1,12 +1,14 @@
 # Installation
 
-PizzaApp requires python3.8,  Node.js 10.0+
+PizzaApp requires python3.8,  Node.js 12.16
 
 The first step to running PizzAapp locally is downloading the code by cloning the repository.
 ```bash
 git clone https://gitlab.com/aykutarslantas/pizzaapp.git
 ```
+# DOCKER (Development)
 
+You can start both api and frontend development servers by typing `docker-compose up -d`.
 ## Backend
 
 Django Rest Framework used to create API functionality. 

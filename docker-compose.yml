@@ -1,0 +1,25 @@
+version: '3.5'
+services:
+  back:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+    - '8000:8000'
+    volumes:
+      - ./python:/usr/src/app/backend
+    command: >
+      /bin/sh -c "python manage.py migrate &&
+                  python manage.py loaddata user &&
+                  python manage.py runserver 0.0.0.0:8000"
+  front:
+    build:
+      context: ./vuejs
+      dockerfile: Dockerfile
+    volumes:
+      - ./vuejs:/usr/src/app/frontend
+    ports:
+    - '8080:8080'
+    command: /bin/sh -c "yarn serve"
+    depends_on:
+      - back
